@@ -36,6 +36,11 @@ def recommend(title, movies):
     # Find the index of the input movie
     idx = movies[movies['Title'] == title].index[0]
 
+
+    
+    # Find the index of the input movie
+    # idx = movies[movies['Title'] == title].index[0]
+    
     # Get similarity scores
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
